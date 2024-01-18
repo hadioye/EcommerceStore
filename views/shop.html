@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer T-Shirt Store</title>
+  <link rel="stylesheet" href="/public/styles.css">
+  <link rel="stylesheet" href="/public/shop.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Soccer T-Shirt Store</h1>
+    <a href="cart.html" class="cart-icon">
+      <img src="/public/images/cart.png" alt="Nothing">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </a>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Product Catalog</h2>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Discover your Favorite!">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <!-- Product cards will be dynamically generated here -->
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+  <script src="/shop.js"></script>
+  <script>
+    // ... Existing functions
+  
+    // Function to display the products on the "shop.html" page
+    function displayProducts() {
+      const productGrid = document.getElementById('product-grid');
+    
+      products.forEach(product => {
+        const card = createProductCard(product);
+  
+        // Add a data attribute to store the product name (used for searching)
+        card.dataset.productName = product.name.toLowerCase(); // Convert to lowercase for case-insensitive search
+    
+        productGrid.appendChild(card);
+      });
+    }
+    
+    // Function to handle the search functionality
+    function searchProducts() {
+      const searchValue = document.getElementById('search-input').value.toLowerCase();
+      const productCards = document.querySelectorAll('.product-card');
+    
+      productCards.forEach(card => {
+        const productName = card.dataset.productName; // Retrieve the product name from the data attribute
+    
+        if (productName.includes(searchValue)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

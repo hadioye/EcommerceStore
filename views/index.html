@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer T-Shirt Store</title>
+  <link rel="stylesheet" href="/public/styles.css">
+  <!-- Add any other necessary stylesheets -->
+</head>
+<body>
+
+  <header>
+    <h1>Soccer T-Shirt Store</h1>
+    <a href="cart.html" class="cart-icon">
+      <img src="/public/images/cart.png" alt="Nothing">
+      <i class="fa fa-shopping-cart"></i>
+    </a>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to Soccer T-Shirt Store</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum tortor et augue dignissim, vel bibendum nisi lacinia.</p>
+  </div>
+
+  <!-- Add the product recommendation column -->
+  <div class="product-recommendation">
+    <h3>Product Recommendations</h3>
+    <!-- Display recommended products here -->
+    <!-- You can use the createProductCard() function to create product cards for recommendations -->
+    <!-- Example:
+    <div class="product-card">
+      <img src="product_image.jpg" alt="Product Image">
+      <h4>Product Name</h4>
+      <p>$19.99</p>
+      <a href="product.html?id=123">View Product</a>
+    </div>
+    -->
+  </div>
+
+  <!-- Add main containers that fetch info from certain pages -->
+  <div class="main-containers">
+    <div class="container">
+      <h3>Latest Products</h3>
+      <!-- Fetch and display the latest products here -->
+      <!-- You can use the createProductCard() function to create product cards for the latest products -->
+    </div>
+    <div class="container">
+      <h3>Featured Products</h3>
+      <!-- Fetch and display the featured products here -->
+      <!-- You can use the createProductCard() function to create product cards for the featured products -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <!-- Include any other necessary JavaScript files -->
+</body>
+</html>

@@ -1,0 +1,81 @@
+.search-bar {
+  display: flex; /* Use flexbox layout to align items horizontally */
+  margin-bottom: 1rem;
+}
+
+#search-input {
+  flex: 1; /* Allow the input to grow and take up available space */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: #9288F8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #322653;
+}
+
+.product-grid {
+  display: grid; /* Use CSS grid for the product cards */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Create responsive grid */
+  gap: 20px; /* Add gap between grid items */
+}
+
+.product-card {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack items vertically within the card */
+  align-items: center; /* Center items horizontally within the card */
+  text-align: center; /* Center text within the card */
+  width: 100%;
+  padding: 1rem; /* Add some padding to the product card */
+  background-color: #ffffff; /* Set a background color for the product card */
+  border-radius: 8px; /* Add border radius to the product card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a card effect */
+  transition: transform 0.2s ease; /* Add a smooth transition on hover */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Apply a small translateY transformation on hover */
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px; /* Add border radius to product images */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+/* CSS rule for the product name and description */
+.product-card h3 {
+  margin-top: 1rem; /* Add a margin between the image and the name */
+  font-size: 1.4rem; /* Increase font size for product name */
+}
+
+.product-card p {
+  margin-top: 0.5rem; /* Add a small margin between the name and description */
+  font-size: 1rem; /* Adjust font size for product description */
+}
+
+/* CSS rule for the cart count badge */
+.cart-count-badge {
+  position: absolute; /* Position the badge relative to the product image */
+  top: 10px; /* Adjust top position to align with the image */
+  right: 10px; /* Adjust right position to align with the image */
+  background-color: #f26430; /* Set a background color for the badge */
+  color: #fff; /* Set text color for the badge */
+  font-size: 0.8rem; /* Adjust font size for the badge text */
+  padding: 0.2rem 0.5rem; /* Add padding to the badge */
+  border-radius: 50%; /* Make the badge circular */
+}

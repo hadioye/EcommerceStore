@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="/public/styles.css">
+  <link rel="stylesheet" href="/public/gallery.css">
+</head>
+<body>
+  <header>
+    <h1>Soccer T-Shirt Store</h1>
+    <a href="cart.html" class="cart-icon">
+      <img src="/public/images/cart.png" alt="Nothing">
+      <i class="fa fa-shopping-cart"></i>
+    </a>
+  </header>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to Our Gallery!</h2>
+    <p>Check out some of our latest product images below:</p>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Product images will be dynamically generated here -->
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+  <script src="/gallery.js"></script>
+
+</body>
+</html>

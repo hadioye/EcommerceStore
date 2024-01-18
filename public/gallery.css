@@ -1,0 +1,30 @@
+/* gallery.css */
+
+/* CSS rule for the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* CSS rule for the gallery grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* CSS rule for gallery images */
+  .gallery-image {
+    width: 100%;
+    height: 200px; /* Set a standard height for the gallery images */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.1); /* Add a slight zoom effect on hover */
+  }
+  

@@ -1,0 +1,78 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F6F4EB; /* Change the background color to white */
+}
+
+header {
+  background-color: #F6F4EB;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  /* Use "Montserrat" as the font for the header text */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Use bold variation (700) of Montserrat */
+  text-align: center; /* Center the header text */
+  color: #322653;
+}
+
+nav {
+  background-color: #FAF3F0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #322653;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  background-color: #9288F8; /* Change the background color to #9288F8 on hover */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a box shadow for a clean look */
+}
+
+/* New styles for cart icon */
+.cart-icon {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon img {
+  width: 80px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  margin-right: 10px; /* Add some spacing between the icon and text */
+}
+
+.main-content {
+  padding: 2rem 
+}

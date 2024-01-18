@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="/public/styles.css">
+  <link rel="stylesheet" href="/public/shop.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Soccer T-Shirt Store</h1>
+    <a href="cart.html" class="cart-icon">
+      <img src="/public/images/cart.png" alt="Nothing">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </a>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Your Shopping Cart</h2>
+    <ul id="cart-items">
+      <!-- The items in the cart will be dynamically added here using JavaScript -->
+    </ul>
+    <button id="generate-invoice-btn">Checkout</button>
+    <button id="clear-cart-btn">Clear Cart</button>
+
+
+  </div>
+
+  <script src="app.js"></script>
+  <script src="shop.js"></script>
+  <script>
+    // Function to display the cart items on the "Shopping Cart" page
+    function displayCartItems() {
+      const cartItemsList = document.getElementById('cart-items');
+      const fragment = document.createDocumentFragment();
+
+      cartItemsList.innerHTML = '';
+
+      getCartItems().forEach(product => {
+        const cartItem = document.createElement('li');
+        cartItem.textContent = product.name;
+        fragment.appendChild(cartItem);
+      });
+
+      cartItemsList.appendChild(fragment);
+    }
+
+    // Function to get the cart items from local storage
+    function getCartItems() {
+      return JSON.parse(localStorage.getItem('cart')) || [];
+    }
+
+    // Call the function to display the cart items
+    displayCartItems();
+  </script>
+</body>
+
+</html>
